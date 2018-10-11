@@ -13,39 +13,13 @@ int windowSizeX, windowSizeY, style;
 ifstream inFile;
 
 void display();
+void getSettings();
+
 int main(int argc, char *argv[])
 {
-//	if (argc > 2) {
-//		cout << "Too Many Arguments!\nStopping Execution";
-//		exit(1);
-//	}
-//	else if (argc == 1) {
-//		cout << "Specify Input File: ";
-//		cin >> inputFile;
-//		inFile.open(inputFile);
-//		if (!inFile) {
-//			cerr << "Unable to open file " + inputFile + "\nStopping Execution";
-//			exit(1);
-//		}
-//	}
-//	else {
-//		inputFile = argv[1];
-//		inFile.open(inputFile);
-//		if (!inFile) {
-//			cerr << "Unable to open file " + inputFile + "\nStopping Execution";
-//			exit(1);
-//		}
-//	}
-	cout << "Specify Window Size for x: ";
-	cin >> windowSizeX;
-	cout << "Specify Window Size for y: ";
-	cin >> windowSizeY;
-	cout << "Choose either 1 or 2 on which algorithm you want to use to draw polygons: (1) DDA or (2) Bresenham algorithm\n";
-	cin >> style;
-
 	//allocate new pixel buffer, need initialization!!
+	getSettings();
 	PixelBuffer = new float[windowSizeX * windowSizeY * 3];
-
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_SINGLE);
 	//set window size to windowSizeX by windowSizeX
@@ -84,10 +58,10 @@ void display()
 
 	//DDA(30, 150, 50, 70, PixelBuffer, windowSizeX);
 	//Bresenham(30, 150, 50, 70, PixelBuffer, windowSizeX);
-//	DDA(150, 30, 50, 170, PixelBuffer, windowSizeX);
+	DDA(150, 30, 50, 170, PixelBuffer, windowSizeX);
 	//Bresenham(150, 30, 30, 150, PixelBuffer, windowSizeX);
 
-	Bresenham(30, 50, 30, 50, PixelBuffer, windowSizeX);
+	//Bresenham(30, 50, 30, 50, PixelBuffer, windowSizeX);
 	//Bresenham(70, 50, 30, 50, PixelBuffer, windowSizeX);
 	//Bresenham(70, 50, 30, 10, PixelBuffer, windowSizeX);
 	//Bresenham(50, 30, 10, 30, PixelBuffer, windowSizeX);
@@ -99,4 +73,34 @@ void display()
 
 	//window refresh
 	glFlush();
+}
+
+void getSettings(){
+	//	if (argc > 2) {
+//		cout << "Too Many Arguments!\nStopping Execution";
+//		exit(1);
+//	}
+//	else if (argc == 1) {
+//		cout << "Specify Input File: ";
+//		cin >> inputFile;
+//		inFile.open(inputFile);
+//		if (!inFile) {
+//			cerr << "Unable to open file " + inputFile + "\nStopping Execution";
+//			exit(1);
+//		}
+//	}
+//	else {
+//		inputFile = argv[1];
+//		inFile.open(inputFile);
+//		if (!inFile) {
+//			cerr << "Unable to open file " + inputFile + "\nStopping Execution";
+//			exit(1);
+//		}
+//	}
+	cout << "Specify Window Size for x: ";
+	cin >> windowSizeX;
+	cout << "Specify Window Size for y: ";
+	cin >> windowSizeY;
+	cout << "Choose either 1 or 2 on which algorithm you want to use to draw polygons: (1) DDA or (2) Bresenham algorithm\n";
+	cin >> style;
 }
