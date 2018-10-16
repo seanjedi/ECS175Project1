@@ -1,7 +1,7 @@
 #include "Bresenham.h"
 #include <math.h>
 
-void makePixel(int x, int y, int rows, float* PixelBuffer);
+void makePixel(int x, int y, float* PixelBuffer);
 inline void max(int& a, int& b) {
 	if (a > b) {
 		int c = a;
@@ -14,13 +14,13 @@ void Bresenham(int x1, int x2, int y1, int y2, float* PixelBuffer, int windowSiz
 	if (x1 == x2) {
 		max(y1, y2);
 		for (int i = y1; i < y2; i++) {
-			makePixel(x1, i, windowSizeX, PixelBuffer);
+			makePixel(x1, i, PixelBuffer);
 		}
 	}
 	else if (y1 == y2) {
 		max(x1, x2);
 		for (int i = x1; i < x2; i++) {
-			makePixel(i, y1, windowSizeX, PixelBuffer);
+			makePixel(i, y1,  PixelBuffer);
 		}
 	}
 	else {
@@ -40,7 +40,7 @@ void Bresenham(int x1, int x2, int y1, int y2, float* PixelBuffer, int windowSiz
 			}
 			int Dx2 = 2 * dx, Dx2y = 2 * (dx - dy);
 			int p = 2 * dx - dy;
-			makePixel(x, y, windowSizeX, PixelBuffer);
+			makePixel(x, y, PixelBuffer);
 			while (y < y2) {
 				y++;
 				if (p < 0)
@@ -49,7 +49,7 @@ void Bresenham(int x1, int x2, int y1, int y2, float* PixelBuffer, int windowSiz
 					x++;
 					p += Dx2y;
 				}
-				makePixel(x, y, windowSizeX, PixelBuffer);
+				makePixel(x, y, PixelBuffer);
 			}
 		}
 		else if (m > 0 && m < 1) {
@@ -64,7 +64,7 @@ void Bresenham(int x1, int x2, int y1, int y2, float* PixelBuffer, int windowSiz
 			}
 			int Dy2 = 2 * dy, Dy2x = 2 * (dy - dx);
 			int p = 2 * dy - dx;
-			makePixel(x, y, windowSizeX, PixelBuffer);
+			makePixel(x, y, PixelBuffer);
 			while (x < x2) {
 				x++;
 				if (p < 0)
@@ -73,7 +73,7 @@ void Bresenham(int x1, int x2, int y1, int y2, float* PixelBuffer, int windowSiz
 					y++;
 					p += Dy2x;
 				}
-				makePixel(x, y, windowSizeX, PixelBuffer);
+				makePixel(x, y, PixelBuffer);
 			}
 		}
 		else if (m <= -1) {
@@ -88,7 +88,7 @@ void Bresenham(int x1, int x2, int y1, int y2, float* PixelBuffer, int windowSiz
 			}
 			int Dx2 = 2 * dx, Dx2y = 2 * (dx - dy);
 			int p = 2 * dx - dy;
-			makePixel(x, y, windowSizeX, PixelBuffer);
+			makePixel(x, y, PixelBuffer);
 			while (y < y2) {
 				y++;
 				if (p < 0)
@@ -97,7 +97,7 @@ void Bresenham(int x1, int x2, int y1, int y2, float* PixelBuffer, int windowSiz
 					x--;
 					p += Dx2y;
 				}
-				makePixel(x, y, windowSizeX, PixelBuffer);
+				makePixel(x, y, PixelBuffer);
 			}
 		}
 		else if (m < 0 && m > -1) {
@@ -112,7 +112,7 @@ void Bresenham(int x1, int x2, int y1, int y2, float* PixelBuffer, int windowSiz
 			}
 			int Dy2 = 2 * dy, Dy2x = 2 * (dy - dx);
 			int p = 2 * dy - dx;
-			makePixel(x, y, windowSizeX, PixelBuffer);
+			makePixel(x, y, PixelBuffer);
 			while (x < x2) {
 				x++;
 				if (p < 0)
@@ -121,7 +121,7 @@ void Bresenham(int x1, int x2, int y1, int y2, float* PixelBuffer, int windowSiz
 					y--;
 					p += Dy2x;
 				}
-				makePixel(x, y, windowSizeX, PixelBuffer);
+				makePixel(x, y, PixelBuffer);
 			}
 		}
 	}
