@@ -2,7 +2,7 @@
 #include <math.h>
 
 void makePixel(int x, int y, float* PixelBuffer);
-inline int round(const float a) { return int(a + 0.5); }
+//inline int round(const float a) { return int(a + 0.5); }
 inline void max(int& a, int& b){
 	if (a > b) {
 		int c = a;

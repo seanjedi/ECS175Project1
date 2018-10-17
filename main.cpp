@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector> 
+#include <cmath>
 #include <string>
 #include "DDA.h"
 #include "Bresenham.h"
@@ -260,6 +261,7 @@ public:
 		translate(centerX, centerY);
 	}
 
+	//Write Polygon Buffer to output file!
 	void writeBack(std::ofstream& file) {
 		file << vertexCount << endl;;
 		for (int i = 0; i < vertexCount; i++) {
@@ -267,6 +269,9 @@ public:
 		}
 	}
 
+	//////////////////////////
+	//Raterization Functions//
+	//////////////////////////
 	//Find if a point is a vertex
 	int isVertex(int x, int y) {
 		for (int i = 0; i < vertexCount; i++) {
@@ -348,7 +353,7 @@ public:
 								right = PolygonBuffer[((windowSizeX * y) + x + 1) * 3];
 							}
 
-							if (left == 0 || right == 0) {
+							if (left == 0 && right == 0) {
 								if (flag) {
 									flag = false;
 								}
@@ -416,7 +421,7 @@ public:
 			if (i_pos < 0 && k_pos < 0)
 			{
 				//Only second point is added
-				Vertex newVertex = { kx, ky };
+				Vertex newVertex = { float(kx), float(ky) };
 				cutout.push_back(newVertex);
 				cutout_size++;
 			}
@@ -428,7 +433,7 @@ public:
 				// and the second point is added 
 				int xintercept = x_intersect(x1, y1, x2, y2, ix, iy, kx, ky);
 				int yintercept= y_intersect(x1, y1, x2, y2, ix, iy, kx, ky);
-				Vertex newVertex = { xintercept, yintercept };
+				Vertex newVertex = { float(xintercept), float(yintercept) };
 				cutout.push_back(newVertex);
 				cutout_size++;
 
@@ -442,7 +447,7 @@ public:
 				//Only point of intersection with edge is added 
 				int xintercept = x_intersect(x1, y1, x2, y2, ix, iy, kx, ky);
 				int yintercept = y_intersect(x1, y1, x2, y2, ix, iy, kx, ky);
-				Vertex newVertex = { xintercept, yintercept };
+				Vertex newVertex = { float(xintercept), float(yintercept) };
 				cutout.push_back(newVertex);
 				cutout_size++;
 			}
@@ -458,7 +463,7 @@ public:
 	// Implements Sutherland–Hodgman algorithm 
 	void sutherlandHodgeman()
 	{
-		int clipper_points[][2] = { {viewXmin,viewYmin}, {viewXmin,viewYmax}, {viewXmax,viewYmax}, {viewXmax,viewYmin} };
+		int clipper_points[][2] = { {int(viewXmin),int(viewYmin)}, {int(viewXmin),int(viewYmax)}, {int(viewXmax),int(viewYmax)}, {int(viewXmax),int(viewYmin)} };
 		//i and k are two consecutive indexes 
 		for (int i = 0; i < 4; i++)
 		{
@@ -618,10 +623,9 @@ void getSettings(int argc, char* argv[]){
 		exit(1);
 	}
 	else if (argc == 1) {
-		//cout << "Specify Input File: ";
-		//getline(cin, inputFile);
-		//inFile.open(inputFile);
-		inFile.open("input.txt");
+		cout << "Specify Input File: ";
+		getline(cin, inputFile);
+		inFile.open(inputFile);
 		if (!inFile) {
 			cerr << "Unable to open input file \nStopping Execution";
 			exit(1);

@@ -1,25 +1,17 @@
 ﻿  main.cpp
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(185): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(188): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(196): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(199): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(230): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(236): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(252): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(255): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(260): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(348): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(361): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(407): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(408): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(422): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(422): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(434): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(434): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(448): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(448): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(464): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(464): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(485): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(488): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(186): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(189): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(197): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(200): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(231): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(237): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(253): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(256): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(261): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(373): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(386): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(429): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(430): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(507): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\sean4\source\repos\ecs175project1\ecs175project1\main.cpp(510): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   ECS175Project1.vcxproj -> C:\Users\Sean4\source\repos\ECS175Project1\Debug\ECS175Project1.exe
