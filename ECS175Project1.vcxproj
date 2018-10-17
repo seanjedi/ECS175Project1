@@ -126,7 +126,6 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Bresenham.h" />
     <ClInclude Include="DDA.h" />
   </ItemGroup>
   <ItemGroup>
